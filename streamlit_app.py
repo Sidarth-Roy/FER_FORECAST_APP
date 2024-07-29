@@ -10,7 +10,10 @@ st.title("Foreign Exchange Rate: Forecasting")
 
 
 # Get the current credentials
-session = get_active_session()
+cnx=st.connection("snowflake")
+# cnx = snowflake.connector.connect(**st.secrets["connections.snowflake"])
+
+session = cnx.session()
 
 def build_forcast_data (currency, days):
     if currency == "INR - India":
