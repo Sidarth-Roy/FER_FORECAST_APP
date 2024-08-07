@@ -1,5 +1,5 @@
 #requirements.txt
-python
+python==3.11
 snowflake-connector-python
 snowflake-snowpark-python
 streamlit
